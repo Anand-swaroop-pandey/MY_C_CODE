@@ -18,8 +18,7 @@ void kadanes_algorithm(int arr[], int n)
     {
         int sum=arr[i]+max_so_far;
         max_so_far=maximum(arr[i],sum);
-        if(max_so_far>max)
-            max=max_so_far;
+        max=maximum(max_so_far,max);
     }
     printf("Maximum sum =%d\n",max);
 }
